@@ -36,12 +36,19 @@ function App() {
     try {
       setIsLoading(true);
       const res = await fetch(`${API_BASE_URL}/products`);
-      if (!res.ok) throw new Error('Failed to load products');
+      if (!res.ok) {
+        let errMsg = 'Failed to connect to backend server.';
+        try {
+          const errData = await res.json();
+          if (errData && errData.message) errMsg = errData.message;
+        } catch (_) {}
+        throw new Error(errMsg);
+      }
       const data = await res.json();
       setProducts(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error(err);
-      showAlert('Failed to connect to backend server.', 'danger');
+      showAlert(err.message || 'Failed to connect to backend server.', 'danger');
     } finally {
       setIsLoading(false);
     }
