@@ -267,23 +267,23 @@ const ProductList = ({
           <div className="table-responsive">
             <table className="table table-hover align-middle mb-0">
               <thead className="table-light">
-                <tr>
-                  <th scope="col" className="ps-3" style={{ width: '28%' }}>
+                <tr className="text-secondary small text-uppercase fw-semibold">
+                  <th scope="col" className="ps-3 py-2.5">
                     Product
                   </th>
-                  <th scope="col" style={{ width: '18%' }}>
+                  <th scope="col" className="py-2.5">
                     Category
                   </th>
-                  <th scope="col" className="text-end" style={{ width: '14%' }}>
-                    Price (INR)
+                  <th scope="col" className="text-end py-2.5 text-nowrap">
+                    Price (₹)
                   </th>
-                  <th scope="col" className="text-center" style={{ width: '18%' }}>
+                  <th scope="col" className="text-center py-2.5 text-nowrap">
                     Stock & Adjust
                   </th>
-                  <th scope="col" className="text-end" style={{ width: '14%' }}>
-                    Stock Value
+                  <th scope="col" className="text-end py-2.5 text-nowrap">
+                    Valuation
                   </th>
-                  <th scope="col" className="text-center pe-3" style={{ width: '8%' }}>
+                  <th scope="col" className="text-center pe-3 py-2.5 text-nowrap">
                     Actions
                   </th>
                 </tr>

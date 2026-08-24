@@ -270,7 +270,7 @@ function App() {
 
         {/* 2-Column Workspace */}
         <div className="row g-4 align-items-start">
-          <div className="col-12 col-xl-4 col-lg-4" id="product-form">
+          <div className="col-12 col-xxl-3 col-xl-4 col-lg-4" id="product-form">
             <ProductForm
               product={editingProduct}
               onSubmit={handleSubmit}
@@ -279,7 +279,7 @@ function App() {
             />
           </div>
 
-          <div className="col-12 col-xl-8 col-lg-8">
+          <div className="col-12 col-xxl-9 col-xl-8 col-lg-8">
             <ProductList
               products={products}
               onEdit={handleEdit}

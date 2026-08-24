@@ -242,13 +242,14 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .card-title {
 
 /* Category Badges */
 .badge-category {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  padding: 0.4em 0.8em;
-  border-radius: 8px;
+  padding: 0.28em 0.65em;
+  border-radius: 6px;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
+  white-space: nowrap;
 }
 
 .badge-provisions, .badge-groceries {
@@ -331,31 +332,27 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .card-title {
 
 /* Quick Stock Adjustment Buttons */
 .stock-btn {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
-  font-size: 0.75rem;
+  border-radius: 5px;
+  font-size: 0.72rem;
   font-weight: bold;
 }
 
 /* Table Styling */
 .table-responsive {
-  overflow-x: hidden;
-}
-
-@media (max-width: 991px) {
-  .table-responsive {
-    overflow-x: auto;
-  }
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .table {
   width: 100%;
-  table-layout: auto;
+  margin-bottom: 0;
+  vertical-align: middle;
 }
 
 .table > :not(caption) > * > * {
@@ -373,13 +370,13 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .card-title {
 
 /* Product Icon circle */
 .product-icon-box {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 /* Low / Out of stock indicator */
