@@ -19,7 +19,8 @@ router.get('/', async (req, res) => {
     const products = await Product.find(query).sort({ createdAt: -1 });
     res.json(products);
   } catch (error) {
-    res.status(500).json({ message: 'Failed to fetch products' });
+    console.error('Error fetching products:', error);
+    res.status(500).json({ message: 'Failed to fetch products', error: error.message });
   }
 });
 
@@ -32,7 +33,7 @@ router.get('/:id', async (req, res) => {
     }
     res.json(product);
   } catch (error) {
-    res.status(500).json({ message: 'Failed to fetch product' });
+    res.status(500).json({ message: 'Failed to fetch product', error: error.message });
   }
 });
 
@@ -64,7 +65,8 @@ router.post('/', async (req, res) => {
     const savedProduct = await newProduct.save();
     res.status(201).json(savedProduct);
   } catch (error) {
-    res.status(500).json({ message: 'Failed to create product' });
+    console.error('Error creating product:', error);
+    res.status(500).json({ message: 'Failed to create product', error: error.message });
   }
 });
 
@@ -102,7 +104,8 @@ router.put('/:id', async (req, res) => {
 
     res.json(updatedProduct);
   } catch (error) {
-    res.status(500).json({ message: 'Failed to update product' });
+    console.error('Error updating product:', error);
+    res.status(500).json({ message: 'Failed to update product', error: error.message });
   }
 });
 
@@ -130,7 +133,8 @@ router.patch('/:id/stock', async (req, res) => {
 
     res.json(product);
   } catch (error) {
-    res.status(500).json({ message: 'Failed to adjust stock' });
+    console.error('Error adjusting stock:', error);
+    res.status(500).json({ message: 'Failed to adjust stock', error: error.message });
   }
 });
 
@@ -144,7 +148,8 @@ router.delete('/:id', async (req, res) => {
 
     res.json({ message: 'Product deleted successfully', id: req.params.id });
   } catch (error) {
-    res.status(500).json({ message: 'Failed to delete product' });
+    console.error('Error deleting product:', error);
+    res.status(500).json({ message: 'Failed to delete product', error: error.message });
   }
 });
 
