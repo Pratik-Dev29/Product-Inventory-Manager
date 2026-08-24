@@ -160,7 +160,7 @@ const ProductForm = ({ product, onSubmit, onCancel, isLoading }) => {
             </div>
 
             {/* Category */}
-            <div className="col-md-6 col-12">
+            <div className="col-12">
               <label htmlFor="category" className="form-label fw-semibold text-secondary small">
                 Category <span className="text-danger">*</span>
               </label>
@@ -183,7 +183,7 @@ const ProductForm = ({ product, onSubmit, onCancel, isLoading }) => {
             </div>
 
             {/* Unit / Measure */}
-            <div className="col-md-6 col-12">
+            <div className="col-12">
               <label htmlFor="unit" className="form-label fw-semibold text-secondary small">
                 Unit / Measure
               </label>
@@ -204,7 +204,7 @@ const ProductForm = ({ product, onSubmit, onCancel, isLoading }) => {
             </div>
 
             {/* Price */}
-            <div className="col-md-6 col-12">
+            <div className="col-6">
               <label htmlFor="price" className="form-label fw-semibold text-secondary small">
                 Price (₹ INR) <span className="text-danger">*</span>
               </label>
@@ -229,7 +229,7 @@ const ProductForm = ({ product, onSubmit, onCancel, isLoading }) => {
             </div>
 
             {/* Quantity */}
-            <div className="col-md-6 col-12">
+            <div className="col-6">
               <label htmlFor="quantity" className="form-label fw-semibold text-secondary small">
                 Quantity in Stock <span className="text-danger">*</span>
               </label>
