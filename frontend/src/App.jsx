@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import ProductForm from './components/ProductForm.jsx';
 import ProductList from './components/ProductList.jsx';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || (process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:5000/api');
 
 const SAMPLE_PRODUCTS = [
   { name: 'Black Tea Blend (500g)', price: 320, quantity: 45, category: 'Groceries & Provisions', unit: 'packet' },

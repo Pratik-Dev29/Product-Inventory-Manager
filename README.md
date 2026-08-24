@@ -108,6 +108,23 @@ Product Inventory Manager/
 
 ---
 
+## 🚀 Deploying to Vercel
+
+This repository is pre-configured for full-stack deployment on **Vercel** with a unified monorepo configuration (`vercel.json`).
+
+### Step-by-Step Deployment:
+
+1. **Push your code to GitHub** (already done!).
+2. Go to [Vercel Dashboard](https://vercel.com/dashboard) and click **"Add New" > "Project"**.
+3. Import your `Pratik-Dev29/Product-Inventory-Manager` repository.
+4. In the **Configure Project** screen:
+   - **Framework Preset**: Leave as *Other* or *Create React App* (managed by `vercel.json`).
+   - **Environment Variables**: Add your MongoDB Atlas connection string:
+     - `MONGODB_URI` = `mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/product_inventory?retryWrites=true&w=majority`
+5. Click **"Deploy"**.
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License.
