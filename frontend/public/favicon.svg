@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Soft Drop Shadow -->
+    <filter id="boxShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#1e1b4b" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Cardboard Kraft Color Gradients -->
+    <!-- Top Face (Brightest kraft) -->
+    <linearGradient id="kraftTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="35%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+
+    <!-- Right Face (Medium warm brown) -->
+    <linearGradient id="kraftRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+
+    <!-- Left Face (Shadowed kraft brown) -->
+    <linearGradient id="kraftLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+
+    <!-- Packaging Sealing Tape -->
+    <linearGradient id="tapeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+
+    <linearGradient id="tapeFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#boxShadow)">
+    <!-- Floor Shadow -->
+    <ellipse cx="32" cy="57" rx="22" ry="5.5" fill="#1e1b4b" opacity="0.3"/>
+
+    <!-- Left Box Face -->
+    <path d="M8 22 L32 34 L32 54 L8 42 Z" fill="url(#kraftLeft)" stroke="#592207" stroke-width="0.8" stroke-linejoin="round"/>
+
+    <!-- Right Box Face -->
+    <path d="M32 34 L56 22 L56 42 L32 54 Z" fill="url(#kraftRight)" stroke="#592207" stroke-width="0.8" stroke-linejoin="round"/>
+
+    <!-- Top Box Face -->
+    <path d="M32 10 L56 22 L32 34 L8 22 Z" fill="url(#kraftTop)" stroke="#78350f" stroke-width="0.8" stroke-linejoin="round"/>
+
+    <!-- Seam line on top -->
+    <line x1="20" y1="16" x2="44" y2="28" stroke="#92400e" stroke-width="0.75" stroke-dasharray="2,1"/>
+
+    <!-- Packaging Tape Across Top Face -->
+    <polygon points="28,12 36,16 36,28 28,24" fill="url(#tapeTop)" opacity="0.95"/>
+    <line x1="32" y1="14" x2="32" y2="26" stroke="#c2410c" stroke-width="0.6" opacity="0.6"/>
+
+    <!-- Packaging Tape Over Front Seam -->
+    <polygon points="30,33 34,35 34,44 30,42" fill="url(#tapeFront)" opacity="0.95"/>
+
+    <!-- Product Shipping Barcode Label on Right Face -->
+    <!-- White Label with perspective skew -->
+    <polygon points="37,35 50,28.5 50,38 37,44.5" fill="#ffffff" stroke="#e2e8f0" stroke-width="0.5" rx="1"/>
+    
+    <!-- Barcode Lines -->
+    <line x1="39" y1="36.5" x2="39" y2="42" stroke="#1e293b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="41.5" y1="35.3" x2="41.5" y2="40.8" stroke="#1e293b" stroke-width="0.7" stroke-linecap="round"/>
+    <line x1="43.5" y1="34.3" x2="43.5" y2="39.8" stroke="#1e293b" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="46" y1="33" x2="46" y2="38.5" stroke="#1e293b" stroke-width="0.8" stroke-linecap="round"/>
+    <line x1="48" y1="32" x2="48" y2="37.5" stroke="#1e293b" stroke-width="1.1" stroke-linecap="round"/>
+
+    <!-- Product Fragile / 'This Side Up' Arrow on Left Face -->
+    <g opacity="0.65">
+      <!-- Up Arrow 1 -->
+      <path d="M15 37 L15 31 M13 33 L15 30 L17 33" stroke="#451a03" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Up Arrow 2 -->
+      <path d="M21 40 L21 34 M19 36 L21 33 L23 36" stroke="#451a03" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Bottom underline -->
+      <line x1="12" y1="38.5" x2="24" y2="44.5" stroke="#451a03" stroke-width="1" stroke-linecap="round"/>
+    </g>
+
+    <!-- Top Highlight Sheen -->
+    <path d="M32 10.5 L55 22" stroke="#ffffff" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+    <path d="M32 10.5 L9 22" stroke="#ffffff" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  </g>
+</svg>

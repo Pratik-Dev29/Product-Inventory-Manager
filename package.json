@@ -1,0 +1,14 @@
+{
+  "name": "product-inventory-manager",
+  "version": "1.0.0",
+  "description": "MERN Stack Product Inventory Manager",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "start:backend": "npm run dev --prefix backend",
+    "start:frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
